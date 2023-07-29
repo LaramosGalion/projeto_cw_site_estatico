@@ -1,14 +1,23 @@
 @charset "UTF-8";
 
-@media screen and (min-width>768px) and (max-width<992px) {
+@media screen and (width > 768px) and (width < 992px){
    
     
     
 }
 
-@media screen and (min-width>=992px) 
-{
+@media screen and (width >= 992px){
 
+    main{
+        width: 950px;
+    }
+    
+    main > section.normal{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    
     
 
 }
