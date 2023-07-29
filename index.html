@@ -8,23 +8,48 @@
     <link rel="stylesheet" href="./src/style/style.css">
     <link rel="stylesheet" href="./src/style/reset.css">
     <link rel="stylesheet" href="./src/style/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body onresize="changeSize()">
     <header>
 
+        
         <nav>
 
-            <menu>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Portifolio</a></li>
-                <li><a href="#">Contacts</a></li>
-            </menu>
+            <span id="burguer" class="material-symbols-outlined" onclick="menuClick()">
+                menu
+            </span>
+
+            <div id="hotbar">
+                <menu>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Portifolio</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </menu>
+            </div>
 
         </nav>
 
-        <div class="hero">
+        <div id="carrossel">
+
+            <div id="container">
+
+                <div class="hero primeira_img"></div>
+                <div class="hero segunda_img"></div>
+                <div class="hero terceira_img"></div>
+
+            </div>
 
         </div>
+
+        <article>
+
+            <p>
+
+            </p>
+
+        </article>
         
     </header>
 
