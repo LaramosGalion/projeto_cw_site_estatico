@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Tektur:wght@400;500;600;700;800;900&display=swap');
 
 :root{
     --cor1:#DC3522;
@@ -10,7 +11,10 @@
     --cor4:#2A2C2B;
     --cor5:#1E1E20;
 
-    --fontpadrao:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    --fontpadrao:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    --fonteDecoradaCursiva:"Permanent Marker";
+    --fonteDecoradaReta:"Tektur";
 }
 
 html{
@@ -30,30 +34,44 @@ header{
     background: var(--cor2) url("") no-repeat center center / cover scroll;
 }
 
-nav{
+div.nav_title{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center ;
-    align-items: center;
-    width: 100%;
-    min-height: 75px;
+    justify-content: space-evenly;
     background:var(--cor4) ;
     box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.1) ;
+    min-height: 75px;
+    width: 100%;
+}
 
-    transition: height 1s;
-    transition-timing-function: ease;
+div.nav_title h1{
+    display: block;
+    font: normal normal bolder 2rem var(--fonteDecoradaCursiva);
+    color: var(--cor2);
+    text-shadow: 1px 1px 1px var(--cor1);
+    line-height: 75px;
+}
+
+nav{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav > span#burguer{
     display: block;
-    color: var(--cor2);
-    scale: 2;
     padding: 20px;
+    width: 144px;
+    text-align: center;
+    color: var(--cor2);
+    text-shadow: 1px 1px 1px var(--cor1);
+    scale: 2;
 }
 
 nav > span#burguer:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 nav div#hotbar{
@@ -68,7 +86,6 @@ nav div menu {
     gap: 15px;
     justify-content: center;
     position: relative;
-
 }
 
 menu li{
@@ -77,8 +94,13 @@ menu li{
     line-height: 42px;
     border-radius: 8px;
     background-color: var(--cor3);
+    box-shadow: 1px 1px 5px var(--cor5);
     overflow: hidden;
     text-align: center;   
+}
+
+menu li:hover{
+    transform: translate(-2px,-2px);
 }
 
 li a{
@@ -87,15 +109,16 @@ li a{
     height: 100%;
     color: var(--cor2);
     font-weight: bold;
-    
     transition: 0.5s;
 }
 
 li a:hover{
-    color: var(--cor3);
+    color: var(--cor1);
     background-color: var(--cor2);
     transform: scale(1.2);
 }
+
+/* ------------------------- */
 
 div#carrossel{
     overflow: hidden;
@@ -106,8 +129,7 @@ div#carrossel{
 div#container{
     display: flex;
     width: 300%;
-    height: 100%;
-    
+    height: 100%; 
     transition:1.5s ease-in-out;
     transform: translateX(0);
 }
@@ -131,7 +153,7 @@ div.terceira_img{
     background-image: url("../image/original_3_1200.jpg");
 }
 
-
+/* ------------------------- */
 
 main{
     display: flex;
@@ -187,6 +209,8 @@ article > p {
     line-height: 2rem;
     text-align: center;
 }
+
+/* ------------------------- */
 
 footer{
     display: flex;

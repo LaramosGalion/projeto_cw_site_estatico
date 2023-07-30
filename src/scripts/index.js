@@ -15,6 +15,8 @@ function carrossel(){
     hero.style.transform = `translateX(${-idx * (100/3)}%)`;
 };
 
+/*------------------------*/
+
 setInterval(carrossel, 5000);
 
 function menuClick(){
