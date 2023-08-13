@@ -121,6 +121,7 @@ li a:hover{
 /* ------------------------- */
 
 div#carrossel{
+    position: relative;
     overflow: hidden;
     height:  calc(100% - 75px);
     width: 100%;
@@ -151,6 +152,14 @@ div.segunda_img{
 
 div.terceira_img{
     background-image: url("../image/original_3_1200.jpg");
+}
+
+#carrossel p{
+    width: 400px;
+    position: absolute;
+    inset: 50% 50%;
+    transform: translate(-50%, -50%);
+    
 }
 
 /* ------------------------- */
